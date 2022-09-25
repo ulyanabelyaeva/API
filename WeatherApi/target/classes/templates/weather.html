@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather API</title>
+</head>
+<body>
+    <div th:text="'City: ' + ${city.getCity()}"></div>
+    <div th:text="'Country: ' + ${city.getCountry()}"></div>
+    <div th:text="'Temperature: ' + ${city.getTemp()}"></div>
+    <div th:text="'Weather: ' + ${city.getWeather()}"></div>
+    <div th:text="'Description: ' + ${city.getDescription()}"></div>
+</body>
+</html>

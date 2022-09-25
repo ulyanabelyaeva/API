@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>GraphQLAPI</title>
+</head>
+<body>
+    <ul th:each="book : ${books}">
+        <li>
+            <div th:text="${book.getId()}"></div>
+            <div th:text="${book.getName()}"></div>
+            <div th:text="${book.getGenre()}"></div>
+            <div th:text="${book.getAuthor()}"></div>
+        </li>
+    </ul>
+
+    <div th:object="${book}">
+        <div th:if="${book != null}" th:text="${book.getId()}"></div>
+        <div th:if="${book != null}" th:text="${book.getName()}"></div>
+        <div th:if="${book != null}" th:text="${book.getGenre()}"></div>
+        <div th:if="${book != null}" th:text="${book.getAuthor()}"></div>
+    </div>
+</body>
+</html>

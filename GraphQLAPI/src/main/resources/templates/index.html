@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>GraphQLAPI</title>
+</head>
+<body>
+    <form method="get" th:action="@{/getAll}">
+        <button type="submit">Получить все книги</button>
+    </form>
+    <div>--------------------------------------------------------------------</div>
+    <form method="post" th:action="@{/getByName}">
+        <input type="text" placeholder="Название книги" name="name">
+        <button type="submit">Получить книгу по названию</button>
+    </form>
+    <div>--------------------------------------------------------------------</div>
+    <form method="post" th:action="@{/addNew}">
+        <input type="text" placeholder="Название книги" name="name">
+        <input type="text" placeholder="Жанр" name="genre">
+        <input type="text" placeholder="Автор" name="author">
+        <button type="submit">Добавить новую книгу</button>
+    </form>
+</body>
+</html>
